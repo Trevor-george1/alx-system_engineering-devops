@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -d */ | grep -oE '[*/]+/' | tr '\n' ',' | sed 's/,$/\n/'
