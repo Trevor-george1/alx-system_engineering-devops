@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -d */ | grep -oE '[*/]+/' | tr '\n' ',' | sed 's/,$/\n/'
+ls -p | LC_ALL=C sort -d | tr '\n' ',' | sed 's/,$/\n/'
