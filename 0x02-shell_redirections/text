@@ -1,0 +1,10 @@
+total 60
+-rw-rw-r-- 1 vagrant vagrant   0 Oct  2 18:09 text
+-rwxrwxrwx 1 vagrant vagrant  26 Oct  2 18:07 12-newest_files
+-rwxrwxrwx 1 vagrant vagrant  47 Oct  2 18:05 11-directories
+-rwxrwxrwx 1 vagrant vagrant  48 Oct  2 17:53 10-no_more_js
+-rw-rw-r-- 1 vagrant vagrant 857 Oct  2 17:44 iacta
+-rwxrwxrwx 1 vagrant vagrant  37 Oct  2 17:44 9-duplicate_last_line
+-rwxrwxrwx 1 vagrant vagrant  36 Oct  2 17:40 8-cwd_state
+-rwxrwxrwx 1 vagrant vagrant  78 Oct  2 17:39 7-file
+-rwxrwxrwx 1 vagrant vagrant  46 Oct  2 17:28 6-third_line
