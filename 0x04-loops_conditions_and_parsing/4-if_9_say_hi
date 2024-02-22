@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script prints Best school 10 times and Hi at 9
+n=0
+while [ $n -lt 11 ]; do
+	if [ $n -eq 9 ]; then
+		echo "Hi"
+	else
+		echo "Best School"
+	fi
+	((n++))
+done
