@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This scripts displays the process name and id of bash commmand
+# Without using ps command
+pgrep -l bash
