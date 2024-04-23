@@ -8,8 +8,7 @@ sudo ufw allow 'Nginx HTTP'
 sudo chown -R "$USER":"$USER" /var/www/html
 sudo chmod -R 755 /var/www
 
-cp /var/www/html/index.ngnix-debian.html /var/www/html/index.nginx-debian.html.bckp
-
+cp /var/www/html/index.nginx-debial.html /var/www/html/index.nginx-debian.html.bckp
 echo -e "Hello World!" > /var/www/html/index.nginx-debian.html
 
 sudo sed -i '24i\  rewrite^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
