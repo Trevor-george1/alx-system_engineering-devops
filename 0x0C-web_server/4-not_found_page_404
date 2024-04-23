@@ -10,7 +10,7 @@ sudo apt-get -y install nginx
 #`cp /var/www/html/index.nginx-debial.html /var/www/html/index.nginx-debian.html.bckp
 echo -e "Hello World!" | sudo tee /var/www/html/index.html
 
-sudo sed -i '24i\  rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+#sudo sed -i '24i\  rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-sudo sed -i '25i\  error_page 404 /error_404.html;' /etc/nginx/sites-avaibale/defaultsudo service nginx restart
+sudo sed -i '25i\  error_page 404 /error_404.html; location = /404.html {internal;}' /etc/nginx/sites-avaibale/defaultsudo service nginx restart
