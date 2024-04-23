@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 # serve a page when 404
 
-sudo apt-get update -y -qq && \
-	sudo apt-get install nginx -y
+sudo apt-get -y update
+sudo apt-get -y install nginx
 #sudo ufw allow 'Nginx HTTP'
 #sudo chown -R "$USER":"$USER" /var/www/html
 #sudo chmod -R 755 /var/www
 
 #`cp /var/www/html/index.nginx-debial.html /var/www/html/index.nginx-debian.html.bckp
-echo -e "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+echo -e "Hello World!" | sudo tee /var/www/html/index.html
 
 sudo sed -i '24i\  rewrite^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
 
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/error_404.html
-sudo sed -i '251\  error_page 404 /error_404.html;' /etc/nginx/sites-avaibale/defaultsudo service nginx restart
+sudo sed -i '25i\  error_page 404 /error_404.html;' /etc/nginx/sites-avaibale/defaultsudo service nginx restart
