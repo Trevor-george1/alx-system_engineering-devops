@@ -13,3 +13,4 @@ else
 		print_info "$1" "$subdomain"
 	done
 fi
+
