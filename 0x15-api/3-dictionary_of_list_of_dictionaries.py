@@ -21,8 +21,7 @@ if __name__ == '__main__':
             dictionary[user_id].append({
                                         "username": username,
                                         "task": task.get('title'),
-                                        "completed": task.get('completed'),
-                                        
+                                        "completed": task.get('completed')
                                         })
     with open('todo_all_employees.json', 'w') as f:
         dump(dictionary, f)
