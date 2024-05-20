@@ -6,14 +6,13 @@ import sys
 
 
 if __name__ == '__main__':
-    user_id = sys.argv[1]
-    url = "https://jsonplaceholder.typicode.com/user/{}".format(user_id)
-    response = requests.get(url)
-    username = response.json().get('username')
 
-    url = "https://jsonplaceholder.typicode.com/user/{}/todos".format(user_id)
-    response = requests.get(url)
-    tasks = response.json()
+    url = "https://jsonplaceholder.typicode.com/"
+    user_id = sys.argv[1]
+    user = requests.get(url + "users/{}".format(user_id)).json()
+    username = user.get('username')
+
+    tasks = requests.get(url + "users/{}/todos".format(user_id)).json()
     dictionary = {user_id: []}
     for task in tasks:
         dictionary[user_id].append({
