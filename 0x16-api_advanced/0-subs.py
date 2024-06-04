@@ -6,9 +6,9 @@ import requests
 
 def number_of_subscribers(subreddit):
     """Quering a subreddit and retrieving the no of subscribers"""
-    url = f"https://www.reddit.com/r/{subreddit}.json"
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
 
-    headers = {'User=Agent': 'CustomApp/1.0 by /u/Trevor'}
+    headers = {'User=Agent': 'example.myredditapp:v1.2.3 (by u/Trevor)'}
 
     response = requests.get(url, headers=headers, allow_redirects=False)
 
